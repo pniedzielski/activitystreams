@@ -1,0 +1,30 @@
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.hie
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+cabal.project.local~
+.HTF/
+.ghc.environment.*
+
+# Cabal file is automatically generated from HPack, so do not include
+# it.
+activitystreams2.cabal
+
+# We are a library, so we don't want to commit a lock file.
+stack.yaml.lock
