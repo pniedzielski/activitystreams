@@ -1,0 +1,48 @@
+name:                activitystreams2
+version:             0.1.0
+github:              pniedzielski/activitystreams2
+license:             BSD-3-Clause
+license-file:        [ LICENSE.md ]
+author:              Patrick M. Niedzielski
+maintainer:          Patrick M. Niedzielski <patrick@pniedzielski.net>
+copyright:           Copyright © 2024, Patrick M. Niedzielski.
+synopsis:            An implementation of ActivityStreams 2 in Haskell.
+stability:           stable
+category:            RDF
+description:         >-
+  ActivityStreams 2.0 is a vocabulary and serialization format for
+  decentralized social media activities standardized by the W3C.  This
+  package implements the vocabulary and serialization format in a
+  native Haskell format.
+
+  See the README for more information:
+  <https://github.com/pniedzielski/activitystreams#readme>.
+
+extra-doc-files:
+  - README.md
+  - CHANGELOG.md
+  - LICENSE.md
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wmissing-export-lists
+  - -Wmissing-home-modules
+  - -Wpartial-fields
+  - -Wredundant-constraints
+  - -Wprepositive-qualified-module
+language: Haskell2010
+default-extensions:
+  - ImportQualifiedPost
+
+library:
+  source-dirs: src
+  dependencies:
+    - base >= 4.18 && < 5
+    - text >= 2 && < 3
+      # This package does not seem to follow a predictable versioning
+      # scheme, so we are very conservative with versioning.
+    - modern-uri >= 0.3.6 && < 0.3.7
